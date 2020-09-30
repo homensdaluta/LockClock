@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".LockReceiver"  android:exported="true"
+        <receiver android:name=".LockStuff.LockReceiver"  android:exported="true"
             tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="manager"
-            type="com.example.testground.LockManager" />
+            type="com.example.testground.lockstuff.LockManager" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

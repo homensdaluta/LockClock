@@ -1,9 +1,9 @@
-package com.example.testground
+package com.example.testground.lockstuff
 
 
 import android.os.Build
-import android.util.Log
 import androidx.annotation.RequiresApi
+import com.example.testground.lockdatabase.LockTime
 import java.time.LocalDateTime
 
 public object LockManager {
@@ -16,18 +16,28 @@ public object LockManager {
 
     @RequiresApi(Build.VERSION_CODES.O)
     public fun initClock() {
-      entryTime=LockTime(LocalDateTime.now(), LocalDateTime.now())
+      entryTime =
+          LockTime(
+              0,
+              LocalDateTime.now(),
+              LocalDateTime.now()
+          )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     public fun startClock(){
-        startTime= LocalDateTime.now()
+        startTime = LocalDateTime.now()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     public fun stopClock(){
-        stopTime= LocalDateTime.now()
-        entryTime= LockTime(startTime, stopTime)
+        stopTime = LocalDateTime.now()
+        entryTime =
+            LockTime(
+                0,
+                startTime,
+                stopTime
+            )
 
     }
 

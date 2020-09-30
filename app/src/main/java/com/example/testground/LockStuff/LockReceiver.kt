@@ -1,11 +1,11 @@
-package com.example.testground
+package com.example.testground.lockstuff
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.util.Log
 import androidx.annotation.RequiresApi
+import com.example.testground.lockstuff.LockManager
 import com.example.testground.databinding.ActivityMainBinding
 
 
